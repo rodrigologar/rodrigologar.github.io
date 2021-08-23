@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,46 +6,121 @@
           box-sizing: border-box;
 }
 
-header .container {
+body {
+  background-color: #181818;
+}
+
+header .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
   width: 100%;
+  color: lightgray;
+}
+
+header .hero .logo {
+  width: 50%;
+  height: inherit;
+  padding-left: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .hero .logo h1 {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-size: 7rem;
+  color: #F4F4F4;
+  padding-top: 2.5vw;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+
+header .hero .logo p {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 2rem;
+  padding-top: 1.5vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+header .hero .svg-hero {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #313131;
-  color: lightgray;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: inherit;
 }
 
-header .container .logo {
+header .hero .svg-hero svg {
+  margin-left: 5vw;
+  height: 800px;
+}
+
+header .hero .svg-hero svg #bulb {
+  opacity: 0.5;
+}
+
+header .hero .svg-hero svg #bulb:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+
+header .hero nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 10vw;
+  padding-left: 7vw;
   width: 50%;
-  color: orange;
-  font-family: monospace;
-  font-size: 2rem;
+  height: inherit;
 }
 
-header .container nav ul {
+header .hero nav ul {
   list-style: none;
+  position: relative;
 }
 
-header .container nav ul li {
+header .hero nav ul li {
   padding: 10% 0;
 }
 
-header .container nav ul li a {
+header .hero nav ul li a {
   text-decoration: none;
-  color: lightgray;
-  font-family: monospace;
-  font-size: 1.5rem;
+  color: #F4F4F4;
+  font-family: "Ubuntu Mono", monospace;
+  opacity: 0.5;
+  font-size: 2rem;
 }
 
-header .container nav ul li a:hover {
-  color: orange;
+header .hero nav ul li a:hover {
+  opacity: 1;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
