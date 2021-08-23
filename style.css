@@ -20,7 +20,6 @@ header .hero {
 }
 
 header .hero .logo {
-  width: 50%;
   height: inherit;
   padding-left: 5vw;
   display: -webkit-box;
@@ -51,10 +50,63 @@ header .hero .logo h1 {
 header .hero .logo p {
   font-family: "Ubuntu Mono", monospace;
   font-size: 2rem;
-  padding-top: 1.5vw;
+  margin-top: 1.5vw;
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.3;
+  border-right: 2px solid white;
+  -webkit-animation: typing 15s steps(19) infinite, blink 0.8s step-end infinite;
+          animation: typing 15s steps(19) infinite, blink 0.8s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 19ch;
+  }
+  80% {
+    width: 19ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 19ch;
+  }
+  80% {
+    width: 19ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
 }
 
 header .hero .svg-hero {
@@ -73,7 +125,7 @@ header .hero .svg-hero {
 
 header .hero .svg-hero svg {
   margin-left: 5vw;
-  height: 800px;
+  height: 100vh;
 }
 
 header .hero .svg-hero svg #bulb {
@@ -82,22 +134,22 @@ header .hero .svg-hero svg #bulb {
 
 header .hero .svg-hero svg #bulb:hover {
   opacity: 1;
-  -webkit-transition: 0.3s ease-out all;
-  transition: 0.3s ease-out all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 header .hero nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   padding-bottom: 10vw;
-  padding-left: 7vw;
+  /* padding-left: 7vw; */
   width: 50%;
   height: inherit;
 }
