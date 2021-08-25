@@ -1,13 +1,13 @@
-const text = 'FRONT-END DEVELOPER';
-let innerText = document.getElementById('typing');
-let i = 0
+const nav = document.querySelector("nav");
+const navOffset = document.getElementById("navbar").offsetTop;
 
-function typewriter() {
-    if (i < text.length) {
-        innerText.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typewriter, 200);
+window.addEventListener("scroll", function () {
+    const offset = window.pageYOffset;
+
+    if (offset > navOffset) {
+        nav.classList.add("scroll");
     }
-}
-
-typewriter()
+    else {
+        nav.classList.remove("scroll");
+    }
+});

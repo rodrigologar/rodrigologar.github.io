@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 $heading-font: 'Ubuntu Mono', monospace;
+$dark-gray: #181818;
+$orange: #D98200;
 $light-gray: #F4F4F4;
+$html-color: #FC490B;
+$css-color: #2196F3;
+$js-color: #f7df1e;
+$dark-orange-bg: #592F00;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #181818;
+    background-color: $dark-gray;
 }
+
+/* HEADER */
 
 header {
     .hero {
@@ -31,7 +40,7 @@ header {
             h1 {
                 font-family: $heading-font;
                 font-weight: 700;
-                font-size: 7rem;
+                font-size: clamp(2rem, 10vw, 7rem);
                 color: $light-gray;
                 padding-top: 2.5vw;
                 letter-spacing: 0.2rem;
@@ -45,24 +54,6 @@ header {
                 font-weight: 400;
                 text-transform: uppercase;
                 opacity: 0.3;
-                border-right: 2px solid white;
-                animation: typing 15s steps(19) infinite, blink 0.8s step-end infinite;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-
-            @keyframes blink {
-                50% {
-                    border-color: transparent;
-                }
-            }
-
-            @keyframes typing {
-                0% {width: 0ch;}
-                30% {width: 19ch;}
-                80% {width: 19ch;}
-                90% {width: 0ch;}
-                100% {width: 0ch;}
             }
         }
 
@@ -75,6 +66,7 @@ header {
 
             svg {
                 margin-left: 5vw;
+                max-height: 800px;
                 height: 100vh;
 
                 #bulb {
@@ -93,9 +85,9 @@ header {
             justify-content: flex-end;
             align-items: flex-end;
             padding-bottom: 10vw;
-            /* padding-left: 7vw; */
             width: 50%;
             height: inherit;
+            transition: all ease 0.3s;
 
             ul {
                 list-style: none;
@@ -119,5 +111,135 @@ header {
                 }
             }
         }
+
+        .scroll {
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding: 0;
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    margin: 2vh 1vw 2vh 0;
+                    padding: 0.5vh 0.5vw;
+
+                    a {
+                        padding: 0.5vh 0.5vw;
+                        border-radius: 10px;
+                        border: $light-gray 4px solid;
+                        background-color: $light-gray;
+                        text-decoration: none;
+                        color: $dark-gray;
+                        font-family: $heading-font;
+                        font-size: 1.5rem;
+                        opacity: 0.5;
+                    }
+    
+                    a:hover {
+                        opacity: 1;
+                        transition: 0.3s ease all;
+                    }
+                }
+            }
+        }
     }
 }
+
+/* END HEADER */
+
+/* ABOUT */
+
+.about {
+    height: 100vh;
+    background-image: url(images/porfolio_bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+
+        p {
+            color: $light-gray;
+            font-family: $heading-font;
+            font-size: 2rem;
+            padding: 0 25vw;
+            text-align: center;
+        }
+    }
+
+    .icons {
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        svg {
+            margin-top: 1%;
+            height: 250px;
+            fill: $light-gray;
+        }
+
+        #html:hover {
+            fill: $html-color;
+            transition: 0.3s ease all;
+        }
+
+        #css:hover {
+            fill: $css-color;
+            transition: 0.3s ease all;
+        }
+
+        #javascript:hover {
+            fill: $js-color;
+            transition: 0.3s ease all;
+        }
+    }
+
+    .links-about {
+        height: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $dark-orange-bg;
+
+        a {
+            text-decoration: none;
+            color: $light-gray;
+            font-family: $heading-font;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 40px;
+            opacity: 0.5;
+        }
+
+        a:hover {
+            opacity: 1;
+            transition: 0.3s ease all;
+        }
+    }
+}
+
+/* END ABOUT */
+
+/* PROJECTS */
+
+.projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-orange-bg;
+    color: $light-gray;
+}
+
+/* END PROJECTS */
