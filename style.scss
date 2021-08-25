@@ -238,53 +238,113 @@ header {
 /* PROJECTS */
 
 .projects {
-    height: 100vh;
     width: 100%;
     display: flex;
+    padding-bottom: 5vh;
     flex-direction: column;
     justify-content: center;
-    background: $dark-orange-bg url(images/pre-contact.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    color: $light-gray;
+    align-items: center;
+    background-color: $dark-orange-bg;
 
-    .tnymun {
+    .project {
+        margin-top: 15vh;
+        width: 100%;
         display: flex;
-        width: inherit;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 8vh;
+        justify-content: space-evenly;
+        align-items: center;
 
-        .card {
-            background-color: $dark-gray;
-            border-radius: 0 50px 50px 0;
-            height: 100%;
-            width: 70vw;
+        .description-right {
+            width: 30%;
             display: flex;
             flex-direction: column;
-
-            h1 {
-                margin-top: -4%;
+            
+            p {
                 font-family: $heading-font;
-                font-size: 70px;
-                opacity: 0.5;
-                margin-left: 2%;
+                font-size: 30px;
+                text-align: right;
+                font-weight: 400;
+                color: $light-gray;
             }
 
-            .card-info {
+            .links-description {
                 display: flex;
-                align-items: center;
-
-                p {
+                justify-content: space-between;
+                
+                a {
+                    padding: 10% 0;
+                    text-decoration: none;
                     font-family: $heading-font;
-                    font-weight: 400;
+                    font-weight: 700;
+                    font-size: 25px;
+                    color: $light-gray;
+                    text-transform: uppercase;
+                    opacity: 0.5;
                 }
 
-                img {
-                    height: 200px;
-                    border-radius: 20px;
-                    margin: 2%;
+                a:hover {
+                    opacity: 1;
+                    cursor: url(images/cursor_click.png), auto;
                 }
+            }
+        }
+
+        .description-left {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            
+            p {
+                font-family: $heading-font;
+                font-size: 30px;
+                text-align: left;
+                font-weight: 400;
+                color: $light-gray;
+            }
+
+            .links-description {
+                display: flex;
+                justify-content: space-between;
+                
+                a {
+                    padding: 10% 0;
+                    text-decoration: none;
+                    font-family: $heading-font;
+                    font-weight: 700;
+                    font-size: 25px;
+                    color: $light-gray;
+                    text-transform: uppercase;
+                    opacity: 0.5;
+                }
+
+                a:hover {
+                    opacity: 1;
+                    cursor: url(images/cursor_click.png), auto;
+                }
+            }
+        }
+
+        svg {
+            width: 60vw;
+            max-width: 540px;
+    
+            #tnymun {
+                opacity: 0.5;
+            }
+    
+            #tnymun:hover {
+                opacity: 1;
+                cursor: url(images/cursor_click.png), auto;
+                transition: 0.3s all ease;
+            }
+    
+            #es {
+                opacity: 0.5;
+            }
+    
+            #es:hover {
+                opacity: 1;
+                cursor: url(images/cursor_click.png), auto;
+                transition: 0.3s all ease;
             }
         }
     }
