@@ -425,4 +425,14 @@ header .hero .scroll ul li a:hover {
 }
 
 /* END PROJECTS */
+/* CONTACT */
+.contact {
+  height: 100vh;
+  padding-top: 10vh;
+  background: #181818 url(images/contact-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* END CONTACT */
 /*# sourceMappingURL=style.css.map */
