@@ -9,6 +9,7 @@
 
 body {
   background-color: #181818;
+  cursor: url(images/cursor.png), auto;
 }
 
 /* HEADER */
@@ -120,6 +121,7 @@ header .hero nav ul li a {
   font-family: "Ubuntu Mono", monospace;
   opacity: 0.5;
   font-size: 2rem;
+  cursor: url(images/cursor_click.png), auto;
 }
 
 header .hero nav ul li a:hover {
@@ -164,6 +166,7 @@ header .hero .scroll ul li a {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.5rem;
   opacity: 0.5;
+  cursor: url(images/cursor_click.png), auto;
 }
 
 header .hero .scroll ul li a:hover {
@@ -262,6 +265,7 @@ header .hero .scroll ul li a:hover {
   text-transform: uppercase;
   font-size: 40px;
   opacity: 0.5;
+  cursor: url(images/cursor_click.png), auto;
 }
 
 .about .links-about a:hover {
@@ -274,17 +278,78 @@ header .hero .scroll ul li a:hover {
 /* PROJECTS */
 .projects {
   height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #592F00 url(images/pre-contact.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: #F4F4F4;
+}
+
+.projects .tnymun {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 8vh;
+}
+
+.projects .tnymun .card {
+  background-color: #181818;
+  border-radius: 0 50px 50px 0;
+  height: 100%;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .tnymun .card h1 {
+  margin-top: -4%;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 70px;
+  opacity: 0.5;
+  margin-left: 2%;
+}
+
+.projects .tnymun .card .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #592F00;
-  color: #F4F4F4;
+}
+
+.projects .tnymun .card .card-info p {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+.projects .tnymun .card .card-info img {
+  height: 200px;
+  border-radius: 20px;
+  margin: 2%;
 }
 
 /* END PROJECTS */
