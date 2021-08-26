@@ -309,22 +309,12 @@ header {
             width: 60vw;
             max-width: 540px;
     
-            #tnymun {
-                opacity: 0.5;
-            }
-    
             #tnymun:hover {
-                opacity: 1;
                 cursor: url(images/cursor_click.png), auto;
                 transition: 0.3s all ease;
             }
     
-            #es {
-                opacity: 0.5;
-            }
-    
             #es:hover {
-                opacity: 1;
                 cursor: url(images/cursor_click.png), auto;
                 transition: 0.3s all ease;
             }

@@ -380,23 +380,13 @@ header .hero .scroll ul li a:hover {
   max-width: 540px;
 }
 
-.projects .project svg #tnymun {
-  opacity: 0.5;
-}
-
 .projects .project svg #tnymun:hover {
-  opacity: 1;
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
-.projects .project svg #es {
-  opacity: 0.5;
-}
-
 .projects .project svg #es:hover {
-  opacity: 1;
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
