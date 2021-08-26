@@ -274,6 +274,20 @@ header .hero .scroll ul li a:hover {
   transition: 0.3s ease all;
 }
 
+.cv-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cv-div #cv {
+  width: 80vw;
+  margin: 10vh 0;
+}
+
 /* END ABOUT */
 /* PROJECTS */
 .projects {
@@ -428,10 +442,69 @@ header .hero .scroll ul li a:hover {
 /* CONTACT */
 .contact {
   height: 100vh;
+  width: 100%;
   padding-top: 10vh;
   background: #181818 url(images/contact-bg.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #F4F4F4;
+  font-family: "Ubuntu Mono", monospace;
+  text-align: center;
+}
+
+.contact .contact-info h1 {
+  font-size: 120px;
+  margin-bottom: 5vh;
+}
+
+.contact .contact-info p {
+  font-size: 30px;
+  margin-top: 5vh;
+}
+
+.contact .contact-info .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-info .contact-icons svg {
+  margin: 10vh 2vw;
+  width: 50px;
+  height: 50px;
+}
+
+.contact .contact-info .contact-icons a {
+  opacity: 0.5;
+}
+
+.contact .contact-info .contact-icons a:hover {
+  cursor: url(images/cursor_click.png), auto;
+  opacity: 1;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 /* END CONTACT */

@@ -233,6 +233,17 @@ header {
     }
 }
 
+.cv-div {
+    display: flex;
+    justify-content: center;
+
+    #cv {
+        width: 80vw;
+        margin: 10vh 0;
+    }
+
+}
+
 /* END ABOUT */
 
 /* PROJECTS */
@@ -356,10 +367,53 @@ header {
 
 .contact {
     height: 100vh;
+    width: 100%;
     padding-top: 10vh;
     background: $dark-gray url(images/contact-bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        color: $light-gray;
+        font-family: $heading-font;
+        text-align: center;
+
+        h1 {
+            font-size: 120px;
+            margin-bottom: 5vh;
+        }
+
+        p {
+            font-size: 30px;
+            margin-top: 5vh;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+
+            svg {
+                margin: 10vh 2vw;
+                width: 50px;
+                height: 50px;
+            }
+
+            a {
+                opacity: 0.5;
+            }
+
+            a:hover {
+                cursor: url(images/cursor_click.png), auto;
+                opacity: 1;
+                transition: 0.3s all ease;
+            }
+        }
+    }
 }
 
 /* END CONTACT */
