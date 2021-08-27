@@ -125,6 +125,23 @@ header {
     }
 }
 
+/* MEDIA QUERIES HEADER */
+
+@media (max-width: 1000px) {
+    .hero {
+        justify-content: center;
+    }
+
+    nav {
+        position: absolute;
+        ul {
+            display: none;
+        }
+    }
+}
+
+/* END MEDIA QUERIES HEADER */
+
 /* END HEADER */
 
 /* ABOUT */
@@ -145,8 +162,9 @@ header {
         p {
             color: $light-gray;
             font-family: $heading-font;
-            font-size: 2rem;
-            padding: 0 25vw;
+            font-size: clamp(30px, 2vw, 32px);
+            padding-left: clamp(45px, 25vw, 450px);
+            padding-right: clamp(45px, 25vw, 450px);
             text-align: center;
         }
     }
@@ -158,8 +176,8 @@ header {
         align-items: flex-start;
 
         svg {
-            margin-top: 1%;
-            height: 250px;
+            margin: 1% 5%;
+            width: 250px;
             fill: $light-gray;
         }
 
@@ -215,6 +233,33 @@ header {
 
 }
 
+/* MEDIA QUERIES ABOUT */
+
+@media (max-width: 1000px) {
+    .about {
+        height: auto;
+        margin-top: 10vh;
+
+        .icons {
+            flex-wrap: wrap;
+
+            svg {
+                margin: 20% 5% 10% 5%;
+            }
+        }
+
+        .links-about {
+            flex-wrap: wrap;
+
+            a {
+                margin: 10% 0;
+            }
+        }
+    }
+}
+
+/* END MEDIA QUERIES ABOUT */
+
 /* END ABOUT */
 
 /* PROJECTS */
@@ -250,10 +295,11 @@ header {
 
             .links-description {
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: flex-end;
                 
                 a {
-                    padding: 10% 0;
+                    padding: 10% 0 5% 8%;
                     text-decoration: none;
                     font-family: $heading-font;
                     font-weight: 700;
@@ -285,10 +331,11 @@ header {
 
             .links-description {
                 display: flex;
-                justify-content: space-between;
+                justify-content: left;
+                flex-wrap: wrap;
                 
                 a {
-                    padding: 10% 0;
+                    padding: 10% 8% 5% 0;
                     text-decoration: none;
                     font-family: $heading-font;
                     font-weight: 700;
@@ -322,6 +369,46 @@ header {
     }
 }
 
+/* MEDIA QUERIES PROJECTS */
+
+@media (max-width: 1000px) {
+    .projects {
+        .project {
+            flex-direction: column;
+
+            svg {
+                display: none;
+            }
+            
+            .description-right {
+                width: 70vw;
+
+                p {
+                    text-align: center;
+                }
+
+                .links-description {
+                    justify-content: center;
+                }
+            }
+
+            .description-left {
+                width: 70vw;
+
+                p {
+                    text-align: center;
+                }
+
+                .links-description {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+/* END MEDIA QUERIES PROJECTS */
+
 /* END PROJECTS */
 
 /* CONTACT */
@@ -345,12 +432,12 @@ header {
         text-align: center;
 
         h1 {
-            font-size: 120px;
+            font-size: clamp(50px, 10vw, 120px);
             margin-bottom: 5vh;
         }
 
         p {
-            font-size: 30px;
+            font-size: clamp(20px, 5vw, 30px);
             margin-top: 5vh;
         }
 
@@ -376,5 +463,13 @@ header {
         }
     }
 }
+
+/* MEDIA QUERIES CONTACT */
+
+@media (max-width: 1000px) {
+
+}
+
+/* END MEDIA QUERIES CONTACT */
 
 /* END CONTACT */

@@ -139,6 +139,22 @@ header .hero .scroll ul li a:hover {
   transition: 0.3s ease all;
 }
 
+/* MEDIA QUERIES HEADER */
+@media (max-width: 1000px) {
+  .hero {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav {
+    position: absolute;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+/* END MEDIA QUERIES HEADER */
 /* END HEADER */
 /* ABOUT */
 .about {
@@ -165,8 +181,9 @@ header .hero .scroll ul li a:hover {
 .about .description p {
   color: #F4F4F4;
   font-family: "Ubuntu Mono", monospace;
-  font-size: 2rem;
-  padding: 0 25vw;
+  font-size: clamp(30px, 2vw, 32px);
+  padding-left: clamp(45px, 25vw, 450px);
+  padding-right: clamp(45px, 25vw, 450px);
   text-align: center;
 }
 
@@ -184,8 +201,8 @@ header .hero .scroll ul li a:hover {
 }
 
 .about .icons svg {
-  margin-top: 1%;
-  height: 250px;
+  margin: 1% 5%;
+  width: 250px;
   fill: #F4F4F4;
 }
 
@@ -252,6 +269,29 @@ header .hero .scroll ul li a:hover {
   margin: 10vh 0;
 }
 
+/* MEDIA QUERIES ABOUT */
+@media (max-width: 1000px) {
+  .about {
+    height: auto;
+    margin-top: 10vh;
+  }
+  .about .icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .icons svg {
+    margin: 20% 5% 10% 5%;
+  }
+  .about .links-about {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .links-about a {
+    margin: 10% 0;
+  }
+}
+
+/* END MEDIA QUERIES ABOUT */
 /* END ABOUT */
 /* PROJECTS */
 .projects {
@@ -310,13 +350,15 @@ header .hero .scroll ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projects .project .description-right .links-description a {
-  padding: 10% 0;
+  padding: 10% 0 5% 8%;
   text-decoration: none;
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
@@ -354,13 +396,15 @@ header .hero .scroll ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projects .project .description-left .links-description a {
-  padding: 10% 0;
+  padding: 10% 8% 5% 0;
   text-decoration: none;
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
@@ -392,6 +436,42 @@ header .hero .scroll ul li a:hover {
   transition: 0.3s all ease;
 }
 
+/* MEDIA QUERIES PROJECTS */
+@media (max-width: 1000px) {
+  .projects .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .project svg {
+    display: none;
+  }
+  .projects .project .description-right {
+    width: 70vw;
+  }
+  .projects .project .description-right p {
+    text-align: center;
+  }
+  .projects .project .description-right .links-description {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects .project .description-left {
+    width: 70vw;
+  }
+  .projects .project .description-left p {
+    text-align: center;
+  }
+  .projects .project .description-left .links-description {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* END MEDIA QUERIES PROJECTS */
 /* END PROJECTS */
 /* CONTACT */
 .contact {
@@ -426,12 +506,12 @@ header .hero .scroll ul li a:hover {
 }
 
 .contact .contact-info h1 {
-  font-size: 120px;
+  font-size: clamp(50px, 10vw, 120px);
   margin-bottom: 5vh;
 }
 
 .contact .contact-info p {
-  font-size: 30px;
+  font-size: clamp(20px, 5vw, 30px);
   margin-top: 5vh;
 }
 
@@ -461,5 +541,7 @@ header .hero .scroll ul li a:hover {
   transition: 0.3s all ease;
 }
 
+/* MEDIA QUERIES CONTACT */
+/* END MEDIA QUERIES CONTACT */
 /* END CONTACT */
 /*# sourceMappingURL=style.css.map */
