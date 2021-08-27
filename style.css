@@ -182,8 +182,8 @@ header .hero .scroll ul li a:hover {
   color: #F4F4F4;
   font-family: "Ubuntu Mono", monospace;
   font-size: clamp(30px, 2vw, 32px);
-  padding-left: clamp(45px, 25vw, 450px);
-  padding-right: clamp(45px, 25vw, 450px);
+  padding-left: clamp(45px, 15vw, 450px);
+  padding-right: clamp(45px, 15vw, 450px);
   text-align: center;
 }
 
@@ -274,6 +274,7 @@ header .hero .scroll ul li a:hover {
   .about {
     height: auto;
     margin-top: 10vh;
+    background-size: cover;
   }
   .about .icons {
     -ms-flex-wrap: wrap;
@@ -450,9 +451,6 @@ header .hero .scroll ul li a:hover {
   .projects .project .description-right {
     width: 70vw;
   }
-  .projects .project .description-right p {
-    text-align: center;
-  }
   .projects .project .description-right .links-description {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -460,9 +458,6 @@ header .hero .scroll ul li a:hover {
   }
   .projects .project .description-left {
     width: 70vw;
-  }
-  .projects .project .description-left p {
-    text-align: center;
   }
   .projects .project .description-left .links-description {
     -webkit-box-pack: center;
@@ -542,6 +537,13 @@ header .hero .scroll ul li a:hover {
 }
 
 /* MEDIA QUERIES CONTACT */
+@media (max-width: 1000px) {
+  .contact {
+    background-size: cover;
+    background-position: top;
+  }
+}
+
 /* END MEDIA QUERIES CONTACT */
 /* END CONTACT */
 /*# sourceMappingURL=style.css.map */

@@ -163,8 +163,8 @@ header {
             color: $light-gray;
             font-family: $heading-font;
             font-size: clamp(30px, 2vw, 32px);
-            padding-left: clamp(45px, 25vw, 450px);
-            padding-right: clamp(45px, 25vw, 450px);
+            padding-left: clamp(45px, 15vw, 450px);
+            padding-right: clamp(45px, 15vw, 450px);
             text-align: center;
         }
     }
@@ -239,6 +239,7 @@ header {
     .about {
         height: auto;
         margin-top: 10vh;
+        background-size: cover;
 
         .icons {
             flex-wrap: wrap;
@@ -383,10 +384,6 @@ header {
             .description-right {
                 width: 70vw;
 
-                p {
-                    text-align: center;
-                }
-
                 .links-description {
                     justify-content: center;
                 }
@@ -395,12 +392,9 @@ header {
             .description-left {
                 width: 70vw;
 
-                p {
-                    text-align: center;
-                }
-
                 .links-description {
                     justify-content: center;
+
                 }
             }
         }
@@ -467,7 +461,10 @@ header {
 /* MEDIA QUERIES CONTACT */
 
 @media (max-width: 1000px) {
-
+    .contact {
+        background-size: cover;
+        background-position: top;
+    }
 }
 
 /* END MEDIA QUERIES CONTACT */
