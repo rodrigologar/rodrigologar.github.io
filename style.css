@@ -206,24 +206,6 @@ header .hero .scroll ul li a:hover {
   fill: #F4F4F4;
 }
 
-.about .icons #html:hover {
-  fill: #FC490B;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-}
-
-.about .icons #css:hover {
-  fill: #2196F3;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-}
-
-.about .icons #javascript:hover {
-  fill: #f7df1e;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-}
-
 .about .links-about {
   height: 20%;
   display: -webkit-box;
@@ -435,6 +417,38 @@ header .hero .scroll ul li a:hover {
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
+}
+
+.projects .others {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20vh;
+}
+
+.projects .others p {
+  font-family: "Ubuntu Mono", monospace;
+  text-transform: uppercase;
+  color: #F4F4F4;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.projects .others p a {
+  text-decoration: none;
+  color: #F4F4F4;
+  opacity: 0.5;
+}
+
+.projects .others p a:hover {
+  opacity: 1;
+  cursor: url(images/cursor_click.png), auto;
 }
 
 /* MEDIA QUERIES PROJECTS */

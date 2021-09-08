@@ -5,7 +5,7 @@ $dark-gray: #181818;
 $orange: #D98200;
 $light-gray: #F4F4F4;
 $html-color: #FC490B;
-$css-color: #2196F3;
+$django-color: #092E20;
 $js-color: #f7df1e;
 $dark-orange-bg: #592F00;
 
@@ -180,21 +180,6 @@ header {
             width: 250px;
             fill: $light-gray;
         }
-
-        #html:hover {
-            fill: $html-color;
-            transition: 0.3s ease all;
-        }
-
-        #css:hover {
-            fill: $css-color;
-            transition: 0.3s ease all;
-        }
-
-        #javascript:hover {
-            fill: $js-color;
-            transition: 0.3s ease all;
-        }
     }
 
     .links-about {
@@ -365,6 +350,31 @@ header {
             #es:hover {
                 cursor: url(images/cursor_click.png), auto;
                 transition: 0.3s all ease;
+            }
+        }
+    }
+
+    .others {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20vh;
+        p {
+            font-family: $heading-font;
+            text-transform: uppercase;
+            color: $light-gray;
+            font-size: 2rem;
+            font-weight: 700;
+
+            a {
+                text-decoration: none;
+                color: $light-gray;
+                opacity: 0.5;
+            }
+
+            a:hover {
+                opacity: 1;
+                cursor: url(images/cursor_click.png), auto;
             }
         }
     }
