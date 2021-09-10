@@ -181,7 +181,7 @@ header .hero .scroll ul li a:hover {
 .about .description p {
   color: #F4F4F4;
   font-family: "Ubuntu Mono", monospace;
-  font-size: clamp(30px, 2vw, 32px);
+  font-size: clamp(20px, 2vw, 32px);
   padding-left: clamp(45px, 15vw, 450px);
   padding-right: clamp(45px, 15vw, 450px);
   text-align: center;
@@ -202,7 +202,8 @@ header .hero .scroll ul li a:hover {
 
 .about .icons svg {
   margin: 1% 5%;
-  width: 250px;
+  width: 20vw;
+  max-width: 250px;
   fill: #F4F4F4;
 }
 
@@ -227,6 +228,7 @@ header .hero .scroll ul li a:hover {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 40px;
+  padding: 0 10vw;
   opacity: 0.5;
   cursor: url(images/cursor_click.png), auto;
 }
@@ -262,15 +264,13 @@ header .hero .scroll ul li a:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .about .icons svg {
-    margin: 20% 5% 10% 5%;
-  }
   .about .links-about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .about .links-about a {
-    margin: 10% 0;
+    margin: 5% 0;
+    font-size: 5vw;
   }
 }
 
@@ -296,7 +296,7 @@ header .hero .scroll ul li a:hover {
   background-color: #592F00;
 }
 
-.projects .project {
+.projects .project_right, .projects .project_left {
   margin-top: 15vh;
   width: 100%;
   display: -webkit-box;
@@ -310,7 +310,7 @@ header .hero .scroll ul li a:hover {
           align-items: center;
 }
 
-.projects .project .description-right {
+.projects .project_right .description-right, .projects .project_left .description-right {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +321,7 @@ header .hero .scroll ul li a:hover {
           flex-direction: column;
 }
 
-.projects .project .description-right p {
+.projects .project_right .description-right p, .projects .project_left .description-right p {
   font-family: "Ubuntu Mono", monospace;
   font-size: 30px;
   text-align: right;
@@ -329,7 +329,7 @@ header .hero .scroll ul li a:hover {
   color: #F4F4F4;
 }
 
-.projects .project .description-right .links-description {
+.projects .project_right .description-right .links-description, .projects .project_left .description-right .links-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +340,7 @@ header .hero .scroll ul li a:hover {
           justify-content: flex-end;
 }
 
-.projects .project .description-right .links-description a {
+.projects .project_right .description-right .links-description a, .projects .project_left .description-right .links-description a {
   padding: 10% 0 5% 8%;
   text-decoration: none;
   font-family: "Ubuntu Mono", monospace;
@@ -351,12 +351,12 @@ header .hero .scroll ul li a:hover {
   opacity: 0.5;
 }
 
-.projects .project .description-right .links-description a:hover {
+.projects .project_right .description-right .links-description a:hover, .projects .project_left .description-right .links-description a:hover {
   opacity: 1;
   cursor: url(images/cursor_click.png), auto;
 }
 
-.projects .project .description-left {
+.projects .project_right .description-left, .projects .project_left .description-left {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,7 +367,7 @@ header .hero .scroll ul li a:hover {
           flex-direction: column;
 }
 
-.projects .project .description-left p {
+.projects .project_right .description-left p, .projects .project_left .description-left p {
   font-family: "Ubuntu Mono", monospace;
   font-size: 30px;
   text-align: left;
@@ -375,7 +375,7 @@ header .hero .scroll ul li a:hover {
   color: #F4F4F4;
 }
 
-.projects .project .description-left .links-description {
+.projects .project_right .description-left .links-description, .projects .project_left .description-left .links-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,7 +386,7 @@ header .hero .scroll ul li a:hover {
       flex-wrap: wrap;
 }
 
-.projects .project .description-left .links-description a {
+.projects .project_right .description-left .links-description a, .projects .project_left .description-left .links-description a {
   padding: 10% 8% 5% 0;
   text-decoration: none;
   font-family: "Ubuntu Mono", monospace;
@@ -397,23 +397,23 @@ header .hero .scroll ul li a:hover {
   opacity: 0.5;
 }
 
-.projects .project .description-left .links-description a:hover {
+.projects .project_right .description-left .links-description a:hover, .projects .project_left .description-left .links-description a:hover {
   opacity: 1;
   cursor: url(images/cursor_click.png), auto;
 }
 
-.projects .project svg {
+.projects .project_right svg, .projects .project_left svg {
   width: 60vw;
   max-width: 540px;
 }
 
-.projects .project svg #tnymun:hover {
+.projects .project_right svg #tnymun:hover, .projects .project_left svg #tnymun:hover {
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
-.projects .project svg #es:hover {
+.projects .project_right svg #es:hover, .projects .project_left svg #es:hover {
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -436,6 +436,7 @@ header .hero .scroll ul li a:hover {
   font-family: "Ubuntu Mono", monospace;
   text-transform: uppercase;
   color: #F4F4F4;
+  padding: 0 10vw;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -453,30 +454,74 @@ header .hero .scroll ul li a:hover {
 
 /* MEDIA QUERIES PROJECTS */
 @media (max-width: 1000px) {
-  .projects .project {
+  .projects .project_right {
+    margin-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .projects .project svg {
-    display: none;
+  .projects .project_right svg {
+    /* display: none; */
   }
-  .projects .project .description-right {
+  .projects .project_right .description-right {
     width: 70vw;
   }
-  .projects .project .description-right .links-description {
+  .projects .project_right .description-right p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .projects .project_right .description-right .links-description {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 2vh;
   }
-  .projects .project .description-left {
+  .projects .project_right .description-right .links-description a {
+    font-size: 5vw;
+    padding: 2vh 0;
+  }
+  .projects .project_left {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .project_left svg {
+    /* display: none; */
+  }
+  .projects .project_left .description-left {
     width: 70vw;
   }
-  .projects .project .description-left .links-description {
+  .projects .project_left .description-left p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .projects .project_left .description-left .links-description {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 2vh;
+  }
+  .projects .project_left .description-left .links-description a {
+    font-size: 5vw;
+    padding: 2vh 0;
+  }
+  .projects .others p {
+    text-align: center;
   }
 }
 

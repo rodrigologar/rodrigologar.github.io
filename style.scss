@@ -162,7 +162,7 @@ header {
         p {
             color: $light-gray;
             font-family: $heading-font;
-            font-size: clamp(30px, 2vw, 32px);
+            font-size: clamp(20px, 2vw, 32px);
             padding-left: clamp(45px, 15vw, 450px);
             padding-right: clamp(45px, 15vw, 450px);
             text-align: center;
@@ -177,7 +177,8 @@ header {
 
         svg {
             margin: 1% 5%;
-            width: 250px;
+            width: 20vw;
+            max-width: 250px;
             fill: $light-gray;
         }
     }
@@ -196,6 +197,7 @@ header {
             font-weight: 700;
             text-transform: uppercase;
             font-size: 40px;
+            padding: 0 10vw;
             opacity: 0.5;
             cursor: url(images/cursor_click.png), auto;
         }
@@ -228,17 +230,14 @@ header {
 
         .icons {
             flex-wrap: wrap;
-
-            svg {
-                margin: 20% 5% 10% 5%;
-            }
         }
 
         .links-about {
             flex-wrap: wrap;
 
             a {
-                margin: 10% 0;
+                margin: 5% 0;
+                font-size: 5vw;
             }
         }
     }
@@ -259,7 +258,7 @@ header {
     align-items: center;
     background-color: $dark-orange-bg;
 
-    .project {
+    .project_right, .project_left {
         margin-top: 15vh;
         width: 100%;
         display: flex;
@@ -363,6 +362,7 @@ header {
             font-family: $heading-font;
             text-transform: uppercase;
             color: $light-gray;
+            padding: 0 10vw;
             font-size: 2rem;
             font-weight: 700;
 
@@ -384,28 +384,69 @@ header {
 
 @media (max-width: 1000px) {
     .projects {
-        .project {
+        .project_right {
+            margin-top: 0;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
 
             svg {
-                display: none;
+                /* display: none; */
             }
             
             .description-right {
                 width: 70vw;
 
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
                 .links-description {
                     justify-content: center;
+                    margin-top: 2vh;
+
+                    a {
+                        font-size: 5vw;
+                        padding: 2vh 0;
+                    }
                 }
             }
+        }
 
+        .project_left {
+            margin-top: 0;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            align-items: center;
+
+            svg {
+                /* display: none; */
+            }
+            
             .description-left {
                 width: 70vw;
 
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
                 .links-description {
                     justify-content: center;
+                    margin-top: 2vh;
 
+                    a {
+                        font-size: 5vw;
+                        padding: 2vh 0;
+                    }
                 }
+            }
+        }
+
+        .others {
+            p {
+                text-align: center;
             }
         }
     }
