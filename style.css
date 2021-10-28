@@ -407,7 +407,7 @@ header .hero .scroll ul li a:hover {
   max-width: 540px;
 }
 
-.projects .project_right svg #tnymun:hover, .projects .project_left svg #tnymun:hover {
+.projects .project_right svg #content:hover, .projects .project_left svg #content:hover {
   cursor: url(images/cursor_click.png), auto;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
